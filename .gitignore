@@ -4,7 +4,10 @@ venv/
 Preprocessing/indices/
 Preprocessing/metadata/
 __pycache__/
-Combined_FAISS/
+Combined_FAISS/*
+
+# Exclude .txt files
+!Combined_FAISS/*.txt
 
 # Ignore specific files
 .env

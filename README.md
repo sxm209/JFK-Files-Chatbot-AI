@@ -81,7 +81,11 @@ The JFK QA Chatbot is a Flask-based web application designed to answer user ques
    pip install -r requirements.txt
    ```
 
-4. Set up environment variables:
+4. Download required data files:
+   - The FAISS index and metadata files are too large to store in the repository. Download them from the provided Google Drive links in `Combined_FAISS/Download_Data.txt`.
+   - Place the downloaded files (`combined_index.bin` and `combined_metadata.pkl`) in the `Combined_FAISS` folder.
+
+5. Set up environment variables:
    - Create a `.env` file in the root directory.
    - Add the following variables:
      ```env
@@ -89,12 +93,12 @@ The JFK QA Chatbot is a Flask-based web application designed to answer user ques
      GROQ_API_KEY=<your-groq-api-key>
      ```
 
-5. Run the application:
+6. Run the application:
    ```bash
    python app.py
    ```
 
-6. Access the application at `http://127.0.0.1:5000`.
+7. Access the application at `http://127.0.0.1:5000`.
 
 ---
 

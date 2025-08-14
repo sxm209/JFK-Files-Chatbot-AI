@@ -1,0 +1,15 @@
+DATA FILES IN THIS FOLDER
+=========================
+
+The actual data files are too large to store in this GitHub repository. 
+Please download them using the links below:
+
+1. Large Dataset 1 (1 GB):
+   Google Drive: https://drive.google.com/file/d/1FWjxWX2oF6yxoArjscO5voeCP0mJ9c55/view?usp=sharing
+
+2. Large Dataset 2 (466 MB):
+   Google Drive: https://drive.google.com/file/d/1O60K1D4YTkAza46y8zMvzES8Y2fIIV62/view?usp=sharing
+
+Notes:
+- These files are stored externally on Google Drive.
+- After downloading, place the files in this folder(Combined_FAISS) to use them with the project scripts.
