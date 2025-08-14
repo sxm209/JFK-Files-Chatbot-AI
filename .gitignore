@@ -6,6 +6,10 @@
 !Combined_FAISS/
 !Combined_FAISS/*.txt
 
+# Ignore specific files within Combined_FAISS
+Combined_FAISS/*.bin
+Combined_FAISS/*.pkl
+
 # Ignore specific folders
 Working_Old_Python_Files/
 venv/
