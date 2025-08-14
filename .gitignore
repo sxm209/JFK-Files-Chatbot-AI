@@ -1,14 +1,14 @@
-# Ignore folders
+# Ignore specific files
+.env
+*.log
+
+# Allow the Combined_FAISS folder and its .txt files
+!Combined_FAISS/
+!Combined_FAISS/*.txt
+
+# Ignore specific folders
 Working_Old_Python_Files/
 venv/
 Preprocessing/indices/
 Preprocessing/metadata/
 __pycache__/
-Combined_FAISS/*
-
-# Exclude .txt files
-!Combined_FAISS/*.txt
-
-# Ignore specific files
-.env
-*.log
