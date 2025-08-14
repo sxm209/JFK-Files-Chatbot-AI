@@ -1,0 +1,11 @@
+# Ignore folders
+Working_Old_Python_Files/
+venv/
+Preprocessing/indices/
+Preprocessing/metadata/
+__pycache__/
+Combined_FAISS/
+
+# Ignore specific files
+.env
+*.log

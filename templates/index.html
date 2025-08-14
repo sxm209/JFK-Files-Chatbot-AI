@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFK QA Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        /**
+         * Toggle the visibility of the sources section.
+         * @param {string} id - The ID of the sources element to toggle.
+         */
+        function toggleSources(id) {
+            const el = document.getElementById(id);
+            el.style.display = (el.style.display === "none") ? "block" : "none";
+        }
+
+        /**
+         * Scroll to the bottom of the chat box.
+         */
+        function scrollToBottom() {
+            const chatBox = document.querySelector('.chat-box');
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // Scroll to bottom on page load
+        window.onload = scrollToBottom;
+
+        // Scroll to bottom on form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.chat-form');
+            form.addEventListener('submit', function() {
+                setTimeout(scrollToBottom, 100); // Delay to ensure DOM updates
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>JFK QA Chatbot</h1>
+        <button class="clear-chat-btn" onclick="window.location.href='/clear'">Clear Chat History</button>
+        <div class="chat-box">
+            {% for message in chat_history %}
+                <div class="message-row user-message">
+                    <div class="chat-bubble user">
+                        <div class="bubble-content">
+                            {{ message.user }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-row bot-message">
+                    <div class="chat-bubble bot">
+                        <div class="bubble-content">
+                            {{ message.bot|safe }}
+                        </div>
+                    </div>
+                    {% if message.citations %}
+                        <div class="source-container">
+                            <button class="source-btn" onclick="toggleSources('sources-{{ loop.index }}')">View Sources</button>
+                            <div id="sources-{{ loop.index }}" class="sources" style="display: none;">
+                                {{ message.citations|safe }}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <form method="POST" class="chat-form">
+            <textarea name="question" placeholder="Type your question..." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
