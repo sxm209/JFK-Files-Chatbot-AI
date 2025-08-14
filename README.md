@@ -157,8 +157,10 @@ The preprocessing scripts are used to prepare the FAISS index and metadata from 
 
 ### Preprocessing Settings
 - **Chunk Size**: Adjust the `chunk_size` parameter in `data_loader.py`.
-- **Batch Size**: Modify `BATCH_SIZE` in `batch_faiss_merge.py` for memory optimization.
-
+- **Batch Size**: Modify `BATCH_SIZE` in `batch_faiss_merge.py` for memory optimization
+  
+---
+![Description of Diagram](Workflow_Diagram.png)
 ---
 
 ## Future Improvements
