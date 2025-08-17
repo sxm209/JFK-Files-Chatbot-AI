@@ -108,7 +108,7 @@ The JFK QA Chatbot is a Flask-based web application designed to answer user ques
 3. View the answer along with source citations.
 4. Use the "Clear Chat History" button to reset the session.
 
-![JFK QA Chatbot UI](screenshot.png)
+![JFK QA Chatbot UI](Screenshot_UI.png)
 
 ---
 
