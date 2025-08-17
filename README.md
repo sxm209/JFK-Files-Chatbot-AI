@@ -66,8 +66,8 @@ The JFK QA Chatbot is a Flask-based web application designed to answer user ques
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd JFK_QA_Chatbot
+   git clone https://github.com/sxm209/JFK-Files-Chatbot-AI.git
+   cd JFK-Files-Chatbot-AI
    ```
 
 2. Create and activate a virtual environment:
@@ -107,6 +107,8 @@ The JFK QA Chatbot is a Flask-based web application designed to answer user ques
 2. Type a question in the chat box and submit.
 3. View the answer along with source citations.
 4. Use the "Clear Chat History" button to reset the session.
+
+![JFK QA Chatbot UI](screenshot.png)
 
 ---
 
